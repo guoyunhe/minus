@@ -6,14 +6,15 @@ App Main Function
 import os
 import sys
 from qtpy.QtCore import Qt
-from qtpy.QtGui import QGuiApplication
+from qtpy.QtWidgets import QApplication
+#from qtpy.QtGui import QGuiApplication as QApplication
 from qtpy.QtQml import QQmlApplicationEngine
 from tasks.task import Task
 
 
 def __main():
-    QGuiApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
-    app = QGuiApplication(sys.argv)
+    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
+    app = QApplication(sys.argv)
 
     engine = QQmlApplicationEngine()
 
